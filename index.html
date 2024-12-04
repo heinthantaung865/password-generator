@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b57910a8be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <p class="pwdGenerator">Password Generator</p>
+      <div class="wrapper">
+        <div class="password">
+          <input type="text" disabled />
+          <i class="fa-solid fa-copy" id="copy"></i>
+        </div>
+
+        <div class="passwordSettings">
+          <div>
+            <span>Password Length</span>
+            <span id="passwordLengthNumber">10</span>
+          </div>
+          <input
+            type="range"
+            min="6"
+            max="30"
+            step="1"
+            value="10"
+            id="passwordLengthRange"
+          />
+          <p>Password settings</p>
+          <div>
+            <div>
+              <input type="checkbox" id="uppercase" />
+              <label for="uppercase">Uppercase (a-z)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="lowercase" />
+              <label for="lowercase">Lowercase (a-z)</label>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" id="numbers" />
+              <label for="numbers">Numbers (0-9)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="symbols" />
+              <label for="symbols">Symbols (!#$%)</label>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn">Generate Password</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
